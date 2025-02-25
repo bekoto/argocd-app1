@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bb-app1-service
+  labels:
+    app: bb-app1
+spec:    
+  selector:
+    app: bb-app1
+  ports:
+    - protocol: TCP
+      port: 8087
+      targetPort: 80
