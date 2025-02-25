@@ -3,7 +3,7 @@ kind: Pod # This is the type of Kubernetes resource we are creating
 metadata:
   name: bb-app1-pod # This is the name of the Pod
   labels:
-    app: bb-app1 # This is a label for the Pod
+    app.kubernetes.io/name: bb-app1 # This is a label for the Pod
 spec:
   containers:
   - name: bb-app1-container # This is the name of the container
