@@ -5,9 +5,14 @@ metadata:
   labels:
     app: bb-app1 # This is a label for the Pod
 spec:
-  containers:
-  - name: bb-app1-container # This is the name of the container
-    image: nginx:1.7.9 # This is the image we are using for the container
-    imagePullPolicy: Never
-    ports:
-    - containerPort: 80 # This is the port the container will listen on
+  template:
+    metadata:
+      labels:
+        app: bb-app1 # This is a label for the Pod
+    spec:
+      containers:
+      - name: bb-app1-container # This is the name of the container
+        image: nginx:1.7.9 # This is the image we are using for the container
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80 # This is the port the container will listen on
